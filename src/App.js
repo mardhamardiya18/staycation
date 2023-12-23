@@ -1,11 +1,11 @@
-
+import "./assets/scss/style.scss"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         
-        <p>Hallo World</p>
+        <p class="text-primary">Hallo World</p>
       </header>
     </div>
   );
