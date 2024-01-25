@@ -49,11 +49,11 @@ export default function Button(props) {
       )
     }else{
       return(
-        <link  to={props.href} 
+        <Link  to={props.href} 
         className={className.join(" ")} 
         style={props.style} onClick={onClick}>
           {props.children}
-        </link>
+        </Link>
       )
     }
   }
