@@ -49,6 +49,7 @@
   font-family: "Poppins", sans-serif;
   &:hover {
     text-decoration: none;
+    color: $primary;
   }
 }
 
@@ -56,6 +57,7 @@ header {
   border-bottom: 1px solid $gray-200;
   width: 100%;
   position: relative;
+  margin-bottom: 70px;
 
   .navbar {
     height: 80px;
