@@ -2,10 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import Button from "elements/Button";
 
+import "./index.scss";
+
 const Breadcrumb = (props) => {
   return (
     <nav aria-label="breadcrumb">
-      <ol className={className.join(" ")}>
+      <ol className="breadcrumb">
         {props.data.map((item, index) => {
           return (
             <li
@@ -34,4 +36,4 @@ Breadcrumb.propTypes = {
   className: PropTypes.string,
 };
 
-export default index;
+export default Breadcrumb;
