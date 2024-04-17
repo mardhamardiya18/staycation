@@ -3,6 +3,7 @@ import PageDetailTitle from "parts/PageDetailTitle";
 import React, { Component } from "react";
 import ItemDetails from "json/itemDetails";
 import FeaturedImage from "parts/FeaturedImage";
+import PageDetailDescription from "parts/PageDetailDescription";
 
 export default class DetailsPage extends Component {
   componentDidMount() {
@@ -21,6 +22,15 @@ export default class DetailsPage extends Component {
         <Header {...this.props}></Header>
         <PageDetailTitle breadcrumb={breadcrumb} data={ItemDetails} />
         <FeaturedImage data={ItemDetails.imageUrls} />
+
+        <section className="container">
+          <div className="row">
+            <div className="col-7 pr-5">
+              <PageDetailDescription data={ItemDetails} />
+            </div>
+            <div className="col-5">Booking Form</div>
+          </div>
+        </section>
       </>
     );
   }
