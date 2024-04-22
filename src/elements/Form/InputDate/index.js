@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import propTypes from "prop-types";
 
@@ -7,12 +7,12 @@ import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 
-import formatDate from "util/formatDate";
-import iconCalendar from "../../../../src/assets/images/icons/ic_calendar.svg";
+import formatDate from "utils/formatDate";
+import iconCalendar from "assets/images/icons/ic_calendar.svg";
 
 const Date = (props) => {
   const { value, placeholder, name } = props;
-  const { isShowed, setIsShowed } = useState(false);
+  const [isShowed, setIsShowed] = useState(false);
 
   const datePickerChange = (value) => {
     const target = {
@@ -84,10 +84,14 @@ const Date = (props) => {
 };
 
 Date.propTypes = {
-  value: propTypes.oneOfType([propTypes.string, propTypes.number]),
+  value: propTypes.oneOfType([
+    propTypes.string,
+    propTypes.number,
+    propTypes.object,
+  ]),
   onChange: propTypes.func,
   placeholder: propTypes.string,
   outerClassName: propTypes.string,
 };
 
-export default index;
+export default Date;

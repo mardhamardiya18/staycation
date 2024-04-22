@@ -1,16 +1,18 @@
-@import "../../../assets/scss/variables";
+@import "../../../assets/scss/colorVariables";
+
 .input-number {
-  .input-number {
+  .input-group {
     background-color: $white;
 
     .input-group-text {
       border: 0;
       cursor: pointer;
+      color: $white;
       padding: 0;
       border-radius: 4px;
       font-size: 24px;
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       display: flex;
       justify-content: center;
       user-select: none;
@@ -25,9 +27,10 @@
     input.form-control {
       border: 0;
       border-radius: 0;
+      outline: none;
       box-shadow: none;
       background-color: $gray-100;
-      padding: 0.575 1 rem;
+      padding: 0.575rem 1 rem;
       text-align: center;
     }
   }
